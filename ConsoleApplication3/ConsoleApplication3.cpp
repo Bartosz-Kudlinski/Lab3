@@ -106,16 +106,18 @@ int main()
 		i++;
 		cout << i;
 	}
-	*/
+	
 	//Zadanie 6
-	float a, b;
+float a, b;
+char znak;
+float wynik;
+char zakonczenie;
+
+while (true) {
 	cout << "Podaj dwie liczby zmiennoprzecinkowe: ";
 	cin >> a >> b;
-	char znak;
 	cout << "Podaj znak dzialania: ";
 	cin >> znak;
-	float wynik;
-	bool zakonczenie;
 
 	switch (znak) {
 	case '+':
@@ -140,8 +142,50 @@ int main()
 			cout << "Wynik dzielenia wynosi: " << wynik << endl;
 			break;
 		}
+	default:
+		cout << "Nieznany znak dzialania!" << endl;
+		break;
 	}
-	
+	cout << "Czy chcesz kontynuowac? (t/n)";
+	cin >> zakonczenie;
+
+	if (zakonczenie == 'n') {
+		cout << "Koniec programu." << endl;
+		break;
+	}
+
 }
+
+//Zadanie 7
+int liczba = 0;
+int i = 0;
+
+while (true) {
+	i++;
+	liczba++;
+
+	if (liczba % 2 != 0) {
+		cout << liczba << endl;
+	}
+
+	if (i == 200) {
+		break;
+	}
+}*/
+
+//Zadanie 8
+int n;
+cout << "Podaj liczbe naturalna dodatnia: ";
+cin >> n;
+
+for (int i = 2; i <= sqrt(n); i++) {
+	if (n % i == 0) {
+		cout << "Dzielnik to: " << i;
+		break;
+	}
+}
+
+}
+
 
 
